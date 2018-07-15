@@ -1,0 +1,187 @@
+.indent-right{
+	margin-right: 1em;
+}
+
+#nav ul li a {
+	display: block;
+	padding: 0.5em 1.5em 0.5em 1.5em;
+	color: rgba(255, 255, 255, 0.5);
+	text-decoration: none;
+	outline: 0;
+	border: 0;
+	-moz-transition: none;
+	-webkit-transition: none;
+	-ms-transition: none;
+	transition: none;
+	list-style: none;
+}
+
+#nav ul li a span {
+	position: relative;
+	display: block;
+	font-size: 0.8em;
+}
+
+#nav ul li a span:before {
+	position: absolute;
+	left: 0;
+	color: #41484c;
+	text-align: center;
+	width: 1.25em;
+	line-height: 1.75em;
+}
+
+#nav ul li a.active {
+	background: rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0 0 0.25em 0 rgba(0, 0, 0, 0.125);
+	color: #fff;
+}
+
+#nav ul li a.active span:before {
+	color: #e27689;
+}
+
+ul.icons {
+		cursor: default;
+	}
+
+		ul.icons li {
+			display: inline-block;
+		}
+
+		ul.icons a {
+			display: inline-block;
+			width: 2em;
+			height: 2em;
+			line-height: 2em;
+			text-align: center;
+			border: 0;
+		}
+
+		#header .icons {
+			font-size: 0.8em;
+			text-align: center;
+		}
+
+			#header .icons a {
+				color: #41484c;
+				-moz-transition: color 0.35s ease-in-out;
+				-webkit-transition: color 0.35s ease-in-out;
+				-ms-transition: color 0.35s ease-in-out;
+				transition: color 0.35s ease-in-out;
+			}
+
+				#header .icons a:hover {
+					color: #fff;
+				}
+
+	ul.icons {
+		cursor: default;
+	}
+
+		ul.icons li {
+			display: inline-block;
+		}
+
+		ul.icons a {
+			display: inline-block;
+			width: 2em;
+			height: 2em;
+			line-height: 2em;
+			text-align: center;
+			border: 0;
+		}
+
+#header li ol ul{
+	list-style: none;
+}
+
+/*#######################################################*/
+/*          LANGUAGE SWITCHER                            */
+/*#######################################################*/
+#language-choice {
+	position: absolute;
+	top: 0;
+	right: 0em;
+	font-size: 90%;
+}
+
+.dropdown-el {
+  /*margin-top: 20vh;*/
+  min-width: 5em;
+  position: relative;
+  display: inline-block;
+  margin-right: .5em;
+  min-height: 2em;
+  max-height: 2em;
+  overflow: hidden;
+  top: .5em;
+  cursor: pointer;
+  text-align: left;
+  white-space: nowrap;
+  color: #444;
+  outline: none;
+  border: .06em solid transparent;
+  border-radius: 1em;
+  background-color: #cde4f5;
+  transition: 0.3s all ease-in-out;
+}
+.dropdown-el input {
+  display: none;
+}
+.dropdown-el label {
+  border-top: .06em solid #d9d9d9;
+  display: block;
+  height: 2em;
+  line-height: 2em;
+  padding-left: 1em;
+  padding-right: 3em;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s color ease-in-out;
+}
+.dropdown-el label:nth-child(2) {
+  margin-top: 2em;
+  border-top: .06em solid #d9d9d9;
+}
+.dropdown-el input:checked + label {
+  display: block;
+  border-top: none;
+  position: absolute;
+  top: 0;
+}
+.dropdown-el input:checked + label:nth-child(2) {
+  margin-top: 0;
+  position: relative;
+}
+.dropdown-el::after {
+  content: "";
+  position: absolute;
+  right: 0.8em;
+  top: 0.9em;
+  border: 0.3em solid #3694d7;
+  border-color: #3694d7 transparent transparent transparent;
+  transition: .4s all ease-in-out;
+}
+.dropdown-el.expanded {
+  border: 0.06em solid #3694d7;
+  background: #fff;
+  border-radius: .25em;
+  padding: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 3px 3px 5px 0px;
+  max-height: 15em;
+}
+.dropdown-el.expanded label {
+  border-top: .06em solid #d9d9d9;
+}
+.dropdown-el.expanded label:hover {
+  color: #3694d7;
+}
+.dropdown-el.expanded input:checked + label {
+  color: #3694d7;
+}
+.dropdown-el.expanded::after {
+  transform: rotate(-180deg);
+  top: .55em;
+}
+
