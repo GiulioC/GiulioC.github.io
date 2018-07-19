@@ -255,7 +255,7 @@
 				onPopupOpen: function() { $body.addClass('modal-active'); },
 				overlayOpacity: 0.2,
 				popupCloserText: '',
-				popupHeight: 100,
+				popupHeight: 35,
 				popupLoaderText: '',
 				popupSpeed: 300,
 				popupWidth: 100,

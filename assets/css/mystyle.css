@@ -1540,6 +1540,22 @@ body.content-active .blur {
 body.modal-active .blur {
 	-moz-filter: blur(2px);
 	-webkit-filter: blur(2px);
-	-ms-filter: blur(2px);
+	-ms-filter: blur(10px);
 	filter: blur(2px);
 }
+
+/* LOADER DELLE FOTO */
+
+/*div[style] {
+	min-height: none;
+	min-width: none;
+	width: 100px;
+	height: 35px;
+}
+
+div[style] {
+	min-height: none;
+	min-width: none;
+	width: 100px;
+	height: 35px;
+}*/
