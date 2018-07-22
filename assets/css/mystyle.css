@@ -1544,18 +1544,52 @@ body.modal-active .blur {
 	filter: blur(2px);
 }
 
-/* LOADER DELLE FOTO */
+/* SEPARAZIONE SEZIONI FOTO */
 
-/*div[style] {
-	min-height: none;
-	min-width: none;
-	width: 100px;
-	height: 35px;
+h2 {
+	margin: 0;
 }
 
-div[style] {
-	min-height: none;
-	min-width: none;
-	width: 100px;
-	height: 35px;
-}*/
+#photo-line {
+	margin: .5em 0em;
+}
+
+/* IMMAGINI DEI LAVORI */
+
+.lavori {
+	cursor: pointer;
+}
+
+/* BOX DELLE FOTO DEI LAVORI */
+
+.foto-lavori {
+	background-color: #CEE3F6;
+	border-radius: 5px;
+	margin: 1em 0em 1em 1em;
+	padding: 10px 2% 0px 2%;
+}
+
+.foto-lavori div {
+	padding: 10px 15px 0 15px;
+}
+
+.chiudi-lavori {
+	cursor: pointer;
+	text-align: right;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.close-img {
+	vertical-align: middle;
+	margin-right: .2em;
+}
+
+.border-close {
+	text-align: right;
+	width: 10%;
+	border: 2px solid black;
+	border-radius: 2px;
+}
