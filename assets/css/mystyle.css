@@ -1781,16 +1781,16 @@ h2 {
     [Timeline]
 ------------------------------------------------------------------*/
 
-/* Layout */
-#sezione-lavoro {
+/* Layout 
+* {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 /* Styling */
-.timeline {
-  /*margin: 0em auto;*/
+/*.timeline {
+  margin: 0em auto;
   position: relative;
   max-width: 46em;
   font-size: 80%;
@@ -1878,4 +1878,4 @@ h2 {
   display: inline-block;
   margin-bottom: 1.2em;
   padding: 0.25em 1em 0.2em 1em;
-}
+}*/
