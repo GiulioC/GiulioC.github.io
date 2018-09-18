@@ -37,12 +37,9 @@ function manageLavori(num) {
 function changeStyle(divnum, bool){
 	divID = "#lavoro"+String(divnum)
 	if (bool){
-		//$(divID).css("border","2px solid red")
 		$(divID).css("opacity","0.5")
 	}
 	else {
-		$(divID).css("border","")
 		$(divID).css("opacity","")
 	}
-	//$(".foto-lavori").each(function(){$(this).css("border","")})
 }
