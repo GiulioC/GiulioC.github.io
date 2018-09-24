@@ -13,116 +13,113 @@
 		<link rel="stylesheet" href="../assets/css/mystyle.css" />
 		<link rel="stylesheet" href="../assets/css/animate.css" />
 		<style>
-      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
-      /* Variables */
-/* Fonts */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,700);
-body {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  font-weight: 300;
-  line-height: 1.5;
-  letter-spacing: 0.05em;
-}
+	        /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+			/* Layout */
+			* {
+			  -moz-box-sizing: border-box;
+			  -webkit-box-sizing: border-box;
+			  box-sizing: border-box;
+			}
 
-/* Layout */
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+			/* Styling */
+			.timeline {
+			  /*margin: 0 0 0 .3em;*/
+			  position: relative;
+			  max-width: 90%;
+			  font-size: 90%;
+			}
+			.timeline:before {
+			  background-color: black;
+			  content: '';
+			  margin-left: -1px;
+			  position: absolute;
+			  top: 0;
+			  left: 2em;
+			  width: 2px;
+			  height: 100%;
+			}
 
-/* Styling */
-.timeline {
-  /*margin: 0em auto;*/
-  position: relative;
-  max-width: 46em;
-  font-size: 80%;
-}
-.timeline:before {
-  background-color: black;
-  content: '';
-  margin-left: -1px;
-  position: absolute;
-  top: 0;
-  left: 2em;
-  width: 2px;
-  height: 100%;
-}
+			.timeline-event {
+			  position: relative;
+			}
+			.timeline-event:hover .timeline-event-icon {
+			  -moz-transform: rotate(-45deg);
+			  -ms-transform: rotate(-45deg);
+			  -webkit-transform: rotate(-45deg);
+			  transform: rotate(-45deg);
+			  background-color: #FAAC58;
+			}
+			.timeline-event:hover .timeline-event-thumbnail {
+			  -moz-box-shadow: inset 40em 0 0 0 #FAAC58;
+			  -webkit-box-shadow: inset 40em 0 0 0 #FAAC58;
+			  box-shadow: inset 40em 0 0 0 #FAAC58;
+			}
 
-.timeline-event {
-  position: relative;
-}
-.timeline-event:hover .timeline-event-icon {
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  background-color: #a83279;
-}
-.timeline-event:hover .timeline-event-thumbnail {
-  -moz-box-shadow: inset 40em 0 0 0 #a83279;
-  -webkit-box-shadow: inset 40em 0 0 0 #a83279;
-  box-shadow: inset 40em 0 0 0 #a83279;
-}
+			.timeline-event-copy {
+			  padding: 2em 2em 2em 0em;
+			  position: relative;
+			  top: -1.875em;
+			  left: 4em;
+			  width: 80%;
+			}
+			.timeline-event-copy h3 {
+			  font-size: 1.75em;
+			}
+			.timeline-event-copy h4 {
+			  font-size: 1.2em;
+			  margin-bottom: 1.2em;
+			}
+			.timeline-event-copy strong {
+			  font-weight: 700;
+			}
+			.timeline-event-copy p:not(.timeline-event-thumbnail) {
+			  padding-bottom: 1.2em;
+			}
 
-.timeline-event-copy {
-  padding: 2em;
-  position: relative;
-  top: -1.875em;
-  left: 4em;
-  width: 80%;
-}
-.timeline-event-copy h3 {
-  font-size: 1.75em;
-}
-.timeline-event-copy h4 {
-  font-size: 1.2em;
-  margin-bottom: 1.2em;
-}
-.timeline-event-copy strong {
-  font-weight: 700;
-}
-.timeline-event-copy p:not(.timeline-event-thumbnail) {
-  padding-bottom: 1.2em;
-}
+			.timeline-event-icon {
+			  -moz-transition: -moz-transform 0.2s ease-in;
+			  -o-transition: -o-transform 0.2s ease-in;
+			  -webkit-transition: -webkit-transform 0.2s ease-in;
+			  transition: transform 0.2s ease-in;
+			  -moz-transform: rotate(45deg);
+			  -ms-transform: rotate(45deg);
+			  -webkit-transform: rotate(45deg);
+			  transform: rotate(45deg);
+			  background-color: black;
+			  outline: 10px solid white;
+			  display: block;
+			  margin: 0.5em 0.5em 0.5em -0.5em;
+			  position: absolute;
+			  top: 0;
+			  left: 1em;
+			  width: 1em;
+			  height: 1em;
+			}
 
-.timeline-event-icon {
-  -moz-transition: -moz-transform 0.2s ease-in;
-  -o-transition: -o-transform 0.2s ease-in;
-  -webkit-transition: -webkit-transform 0.2s ease-in;
-  transition: transform 0.2s ease-in;
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  background-color: black;
-  outline: 10px solid white;
-  display: block;
-  margin: 0.5em 0.5em 0.5em -0.5em;
-  position: absolute;
-  top: 0;
-  left: 1em;
-  width: 1em;
-  height: 1em;
-}
+			.timeline-event-thumbnail {
+			  -moz-transition: box-shadow 0.5s ease-in 0.1s;
+			  -o-transition: box-shadow 0.5s ease-in 0.1s;
+			  -webkit-transition: box-shadow 0.5s ease-in;
+			  -webkit-transition-delay: 0.1s;
+			  transition: box-shadow 0.5s ease-in 0.1s;
+			  color: white;
+			  font-size: 0.8em;
+			  background-color: black;
+			  -moz-box-shadow: inset 0 0 0 0em #ef795a;
+			  -webkit-box-shadow: inset 0 0 0 0em #ef795a;
+			  box-shadow: inset 0 0 0 0em #ef795a;
+			  display: inline-block;
+			  margin-bottom: 1.2em;
+			  padding: 0.25em 1em 0.2em 1em;
+			}
 
-.timeline-event-thumbnail {
-  -moz-transition: box-shadow 0.5s ease-in 0.1s;
-  -o-transition: box-shadow 0.5s ease-in 0.1s;
-  -webkit-transition: box-shadow 0.5s ease-in;
-  -webkit-transition-delay: 0.1s;
-  transition: box-shadow 0.5s ease-in 0.1s;
-  color: white;
-  font-size: 0.75em;
-  background-color: black;
-  -moz-box-shadow: inset 0 0 0 0em #ef795a;
-  -webkit-box-shadow: inset 0 0 0 0em #ef795a;
-  box-shadow: inset 0 0 0 0em #ef795a;
-  display: inline-block;
-  margin-bottom: 1.2em;
-  padding: 0.25em 1em 0.2em 1em;
-}
+			#nav ul li a span::before {
+				background-color: white;
+				width: 2em;
+				border-radius: 3px;
+				box-shadow: 4px 4px #000000;
+				opacity: 0.7;
+			}
     </style>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
@@ -132,7 +129,7 @@ body {
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a class="image avatar"><img src="../images/avatar.jpg" alt="" /></a>
+					<a class="image avatar"><img src="../images/avatar.jpg" alt="" id="foto-avatar"/></a>
 					<h3><strong class="indent-right">Giulio Carducci</strong><p class="indent-right">Ingegnere Informatico</p>
 				
 					<nav id="nav">
@@ -148,8 +145,6 @@ body {
 
 		<!-- Main -->
 			<div id="main">
-
-				<!-- One -->
 					<section id="one" class="sezioni-cv">
 						<div id="language-choice">
 							<span class="dropdown-el">
@@ -164,38 +159,21 @@ body {
 
 					<section id="lavoro" class="sezioni-cv">
 						<h2 class="titolo-sezione" class="titolo-timeline">Esperienze lavorative</h2>
-						<!--<div class="indent">
-							<div class="col-12 col-12-xsmall">
-								<h5>Esperienza 1</h5>
-								<ul>
-									<li>Dolor pulvinar etiam magna etiam.</li>
-									<li>Sagittis adipiscing lorem eleifend.</li>
-								</ul>
-							</div>
-							<div class="col-12 col-12-xsmall">
-								<h5>Esperienza 2</h5>
-								<ul>
-									<li>Dolor pulvinar etiam magna etiam.</li>
-									<li>Sagittis adipiscing lorem eleifend.</li>
-								</ul>
-							</div>
-							<div class="col-12 col-12-xsmall">
-								<h5>Esperienza 3</h5>
-								<ul>
-									<li>Dolor pulvinar etiam magna etiam.</li>
-									<li>Sagittis adipiscing lorem eleifend.</li>
-								</ul>
-							</div>
-						</div>-->
 						<ul class="timeline">
 						  <li class="timeline-event">
 						    <label class="timeline-event-icon"></label>
 						    <div class="timeline-event-copy">
-						      <p class="timeline-event-thumbnail">April 2011 - heute</p>
-						      <h3>Geil,Danke! GmbH</h3>
-						      <h4>Geschäftsführerin eines Web-Studios</h4>
-						      <p><strong>Schwerpunkt: Frontend-Entwicklung</strong><br>Entwickeln von anspruchsvollen, animierten, responsive und adaptive Webseiten mit HTML5, SCSS, jQuery; für alle Browser, optimiert für Desktop, Notebook, Smartphones und Tablets (iOS, Android, Windows).</p>
-						      <p><strong>Projektmanagement mit Scrum</strong><br>Ständiges Verbessern des agilen Entwicklungsprozesses beispielsweise durch Grunt, Yeoman, GIT, JIRA und BrowserStack.</p>
+						      <p class="timeline-event-thumbnail">Maggio 2018 - Oggi</p>
+						      <h2><strong style="color:black">SOFTWARE DEVELOPER</strong></h2>
+						      <h4>Synapta s.r.l.</h4>
+						      <h4>Ho iniziato a lavorare in Synapta non appena conclusi gli studi e sto continuando questa collaborazione in parallelo all'attività prevista dalla borsa di studio. Mi occupo principalmente di sviluppo software e analisi di dati, ma le attività variano molto a seconda delle esigenze.</h4>
+						      <ul>
+						      	<li class="cv-list">Ho contribuito alla digitalizzazione dell'archivio dell'Accademia delle Scienze di Torino generando automaticamente i metadati dei libri</li>
+						      	<li class="cv-list">Principale incaricato di beta testing e unit testing per la piattaforma <a href="https://contrattipubblici.org" target="blank">contrattipubblici.org</a></li>
+						      	<li class="cv-list">Ho estratto informazioni rilevanti da un corpus di documenti testuali, applicando diverse tecniche di Natual Language Processing (NLP) quali Topic Modeling, estrazione di keywords, pulizia dei dati e rimozione di outliers, clustering word-based</li>
+						      	<li class="cv-list">Ricerca tramite API, download, Optical Character Recognition (OCR), e indicizzazione di documenti di interesse all'interno di un motore di ricerca di documenti già esistente</li>
+						      	<li class="cv-list">Occasionale sviluppo frontend e backend per compiti secondari</li>
+						      </ul>
 						    </div>
 						  </li>
 						  <li class="timeline-event">
@@ -315,5 +293,6 @@ body {
 			<script src="../assets/js/language.js"></script>
     		<script src="../assets/js/progress-bar.min.js"></script>
     		<script src="../assets/js/jquery.appear.js"></script>
+    		<script src="../assets/js/misc.js"></script>
 	</body>
 </html>
