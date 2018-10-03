@@ -31,10 +31,10 @@
 			.timeline:before {
 			  background-color: black;
 			  content: '';
-			  margin-left: -1px;
+			  margin-left: 0px;
 			  position: absolute;
 			  top: 0;
-			  left: 2em;
+			  /*left: 2em;*/
 			  width: 2px;
 			  height: 100%;
 			}
@@ -56,11 +56,11 @@
 			}
 
 			.timeline-event-copy {
-			  padding: 2em 2em 2em 0em;
+			  padding: 2em 0em 2em 0em;
 			  position: relative;
 			  top: -1.875em;
-			  left: 4em;
-			  width: 80%;
+			  left: 35px;
+			  width: 90%;
 			}
 			.timeline-event-copy h3 {
 			  font-size: 1.75em;
@@ -88,10 +88,10 @@
 			  background-color: black;
 			  outline: 10px solid white;
 			  display: block;
-			  margin: 0.5em 0.5em 0.5em -0.5em;
+			  margin: 0.5em 0em 0.5em 0em;
 			  position: absolute;
 			  top: 0;
-			  left: 1em;
+			  left: -.4em;
 			  width: 1em;
 			  height: 1em;
 			}
@@ -105,12 +105,16 @@
 			  color: white;
 			  font-size: 0.8em;
 			  background-color: black;
-			  -moz-box-shadow: inset 0 0 0 0em #ef795a;
-			  -webkit-box-shadow: inset 0 0 0 0em #ef795a;
-			  box-shadow: inset 0 0 0 0em #ef795a;
+			  -moz-box-shadow: inset 0 0 0 0em #FE642E;
+			  -webkit-box-shadow: inset 0 0 0 0em #FE642E;
+			  box-shadow: inset 0 0 0 0em #FE642E;
 			  display: inline-block;
 			  margin-bottom: 1.2em;
 			  padding: 0.25em 1em 0.2em 1em;
+			}
+
+			.timeline-last {
+				padding: 2em 0 0 0;
 			}
 
 			#nav ul li a span::before {
@@ -119,6 +123,19 @@
 				border-radius: 3px;
 				box-shadow: 4px 4px #000000;
 				opacity: 0.7;
+			}
+
+			#nav ul li a span {
+				font-size: 0.9em;
+				text-align: right;
+			}
+
+			#main {
+				padding: 0 0 0 2%;
+			}
+
+			ul .timeline {
+				padding-left: 0;
 			}
     </style>
 
@@ -160,12 +177,29 @@
 					<section id="lavoro" class="sezioni-cv">
 						<h2 class="titolo-sezione" class="titolo-timeline">Esperienze lavorative</h2>
 						<ul class="timeline">
+
+						  <li class="timeline-event">
+						    <label class="timeline-event-icon"></label>
+						    <div class="timeline-event-copy">
+						      <p class="timeline-event-thumbnail">Giugno 2018 - Oggi</p>
+						      <h2><strong style="color:black">BORSISTA DI RICERCA PER IL PROGETTO REPOSUM</strong></h2>
+						      <h4><strong>Università degli Studi di Torino & Synapta s.r.l.</strong></h4>
+						      <h4>La borsa di studio, bandita dal Dipartimento di Filosofia e Scienze dell’Educazione di UniTo, prevede l'annotazione, analisi e rappresentazione di un corpus di metadati su tesi di dottorato italiane ed estere usando tecniche di natural language processing e machine learning.</h4>
+						      <ul>
+						      	<li class="cv-list">Classificazione delle tesi di filosofia utilizzando approcci di machine learning ibridi</li>
+						      	<li class="cv-list">Determinazione dell'argomento delle tesi con un approccio basato su topic modeling</li>
+						      	<li class="cv-list">Estrazione di features dai documenti con tecniche bag-of-words, entity recognition, entity linking</li>
+						      	<li class="cv-list">Ho Collaborato a stretto contatto con i membri del Dipartimento di Filosofia e di Informatica per raggiungere l'obiettivo comune</li>
+						      </ul>
+						    </div>
+						  </li>
+
 						  <li class="timeline-event">
 						    <label class="timeline-event-icon"></label>
 						    <div class="timeline-event-copy">
 						      <p class="timeline-event-thumbnail">Maggio 2018 - Oggi</p>
 						      <h2><strong style="color:black">SOFTWARE DEVELOPER</strong></h2>
-						      <h4>Synapta s.r.l.</h4>
+						      <h4><strong>Synapta s.r.l.</strong></h4>
 						      <h4>Ho iniziato a lavorare in Synapta non appena conclusi gli studi e sto continuando questa collaborazione in parallelo all'attività prevista dalla borsa di studio. Mi occupo principalmente di sviluppo software e analisi di dati, ma le attività variano molto a seconda delle esigenze.</h4>
 						      <ul>
 						      	<li class="cv-list">Ho contribuito alla digitalizzazione dell'archivio dell'Accademia delle Scienze di Torino generando automaticamente i metadati dei libri</li>
@@ -176,95 +210,145 @@
 						      </ul>
 						    </div>
 						  </li>
+
 						  <li class="timeline-event">
 						    <label class="timeline-event-icon"></label>
 						    <div class="timeline-event-copy">
-						      <p class="timeline-event-thumbnail">November 2009 - März 2011</p>
-						      <h3>Freelancer</h3>
-						      <h4>Designer und Autor</h4>
-						      <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+						      <p class="timeline-event-thumbnail">Aprile 2015 - Settembre 2015</p>
+						      <h2><strong style="color:black">STAGE DI RICERCA</strong></h2>
+						      <h4><strong>Cognitive Systems Group (Universität Bremen)</strong></h4>
+						      <h4>Il Cognitive Systems Group (CoSy) è un centro di ricerca dell'Università di Brema che studia il modo in cui la mente umana processa le informazioni dello spazio e degli eventi circostanti. Ho lavorato per 6 mesi in qualità di ricercatore, finanziato dal programme europeo ERASMUS+. Ho avuto l'occasione di collaborare con un team multidisciplinare e multiculturale nell'ambito di un progetto di ricerca a livello europeo (<a href="http://hcc.uni-bremen.de/cognitive-vision/" target="blank">Cognitive Vision</a>).</h4>
+						      <ul>
+						      	<li class="cv-list">Stima del movimento della telecamera basata sul moto percepito nella scena</li>
+						      	<li class="cv-list">Applicazione di diverse tecniche di face recognition nel campo del cinema</li>
+						      	<li class="cv-list">Addestramento di modelli per il riconoscimento di forme e oggetti</li>
+						      </ul>
 						    </div>
 						  </li>
-						  <li class="timeline-event">
-						    <label class="timeline-event-icon"></label>
-						    <div class="timeline-event-copy">
-						      <p class="timeline-event-thumbnail">April 2011 - heute</p>
-						      <h3>konplan gmbh</h3>
-						      <h4>IT-Consultant</h4>
-						      <p><strong>Systemarchitektur, Consulting</strong><br>Konzeption und Modellierung von Systemen und APIs für Digital Publishing und Entitlement nach SOA</p>
-						    </div>
-						  </li>
+
 						</ul>
 					</section>
 
-					<section id="pubblicazioni" class="sezioni-cv">
-						<h2 class="titolo-sezione">Istruzione</h2>
+					<section id="istruzione" class="sezioni-cv">
+						<h2 class="titolo-sezione" class="titolo-timeline">Istruzione</h2>
 						<ul class="timeline">
-						  <li class="timeline-event">
+
+							<li class="timeline-event">
 						    <label class="timeline-event-icon"></label>
 						    <div class="timeline-event-copy">
-						      <p class="timeline-event-thumbnail">April 2011 - heute</p>
-						      <h3>Geil,Danke! GmbH</h3>
-						      <h4>Geschäftsführerin eines Web-Studios</h4>
-						      <p><strong>Schwerpunkt: Frontend-Entwicklung</strong><br>Entwickeln von anspruchsvollen, animierten, responsive und adaptive Webseiten mit HTML5, SCSS, jQuery; für alle Browser, optimiert für Desktop, Notebook, Smartphones und Tablets (iOS, Android, Windows).</p>
-						      <p><strong>Projektmanagement mit Scrum</strong><br>Ständiges Verbessern des agilen Entwicklungsprozesses beispielsweise durch Grunt, Yeoman, GIT, JIRA und BrowserStack.</p>
+						      <p class="timeline-event-thumbnail">Settembre 2015 - Aprile 2018</p>
+						      <h2><strong style="color:black">LAUREA MAGISTRALE IN INGEGNERIA INFORMATICA</strong></h2>
+						      <h4><strong>Politecnico di Torino</strong></h4>
+						      <h4>Ho scelto l'indirizzo <i>Software</i> in lingua inglese includendo esami a scelta del percorso <i>Data Science</i>. Ho svolto l'attività di Tesi nell'Istituto Superiore Mario Boella (ISMB), un centro di ricerca fortemente orientato all'innovazione. Il mio lavoro consiste nel determinare la personalità degli utenti di Twitter sulla base dei loro tweet usando tecniche di machine learning e natural language processing.</h4>
+						      <ul>
+						      	<li class="cv-list">Tesi: <i>Semantic Analysis to Compute Personality Traits From Social Media Posts</i></li>
+						      	<li class="cv-list">Leggi la tesi a <a href="../files/giulio_carducci_master_thesis.pdf" target="blank">questo link</a> (TLDR; guarda la <a href="https://www.slideshare.net/GiulioCarducci/semantic-analysis-to-compute-personality-traits-from-social-media-posts-117854220" target="blank">presentazione</a>!)</li>
+						      	<li class="cv-list">Voto finale: 99/110</li>
+						      </ul>
 						    </div>
-						  </li>
-						  <li class="timeline-event">
+						  	</li>
+
+						  	<li class="timeline-event">
 						    <label class="timeline-event-icon"></label>
 						    <div class="timeline-event-copy">
-						      <p class="timeline-event-thumbnail">November 2009 - März 2011</p>
-						      <h3>Freelancer</h3>
-						      <h4>Designer und Autor</h4>
-						      <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+						      <p class="timeline-event-thumbnail">Settembre 2011 - Marzo 2015</p>
+						      <h2><strong style="color:black">LAUREA IN INGEGNERIA INFORMATICA</strong></h2>
+						      <h4><strong>Università degli Studi Dell'Aquila</strong></h4>
+						      <h4>Ho lavorato alla Tesi nel centro di eccellenza DEWS, con l'obiettivo di sviluppare e testare un database locale per un sistema di face recognition su piattaforma embedded.</h4>
+						      <ul>
+						      	<li class="cv-list">Tesi: <i>Design, implementation and exploitation of a Database to support an embedded face recognition system</i></li>
+						      	<li class="cv-list">Voto finale: 102/110</li>
+						      </ul>
 						    </div>
-						  </li>
-						  <li class="timeline-event">
+						  	</li>
+
+						  	<li class="timeline-event">
 						    <label class="timeline-event-icon"></label>
-						    <div class="timeline-event-copy">
-						      <p class="timeline-event-thumbnail">April 2011 - heute</p>
-						      <h3>konplan gmbh</h3>
-						      <h4>IT-Consultant</h4>
-						      <p><strong>Systemarchitektur, Consulting</strong><br>Konzeption und Modellierung von Systemen und APIs für Digital Publishing und Entitlement nach SOA</p>
+						    <div class="timeline-event-copy timeline-last">
+						      <p class="timeline-event-thumbnail">Settembre 2006 - Luglio 2011</p>
+						      <h2><strong style="color:black">DIPLOMA DI MATURITÀ SCIENTIFICA</strong></h2>
+						      <h4><strong>Liceo Scientifico "A. Bafine", L'Aquila</strong></h4>
+						      <h4>Liceo Scientifico Sperimentale PNI (Piano Nazionale Informatica).</h4>
+						      <ul>
+						      	<li class="cv-list">Voto: 93/100</li>
+						      </ul>
 						    </div>
-						  </li>
+						  	</li>
+
 						</ul>
 					</section>
 
 					<section id="pubblicazioni" class="sezioni-cv">
 						<h2 class="titolo-sezione">Pubblicazioni</h2>
+						<ul>
+							<li class="publication-list">Carducci, G., Rizzo, G., Monti, D., Palumbo, E., Morisio, M., TwitPersonality: Computing Personality Traits from Tweets using Word Embeddings and Supervised Learning, <i>ultidisciplinary Digital Publishing Institute (MDPI)</i>, 2018. <a href="https://doi.org/10.3390/info9050127" target="blank">doi.org/10.3390/info9050127</a></li>
+							<li class="publication-list">Work in progress...</li>
+						</ul>
 					</section>
 
 					<section id="competenze" class="sezioni-cv">
-                        <h2 class="titolo-sezione">My Skills</h2>
+                        <h2 class="titolo-sezione">Competenze</h2>
                         <div class="indent">
 	                        <div class="progress-box">
-	                            <h5>Adobe Illustrator <span class="color-heading pull-right"></span></h5>
+	                            <h3 class="skills">Python<span class="color-heading pull-right"></span></h3>
 	                            <div class="progress">
-	                                <div class="progress-bar bg-color-base" role="progressbar" data-width="12"></div>
+	                                <div class="progress-bar bg-color-base" role="progressbar" data-width="84"></div>
 	                            </div>
 	                        </div>
 	                        <div class="progress-box">
-	                            <h5>Adobe Photoshop <span class="color-heading pull-right"></span></h5>
+	                            <h3 class="skills">Natural Language Processing<span class="color-heading pull-right"></span></h3>
 	                            <div class="progress">
-	                                <div class="progress-bar bg-color-base" role="progressbar" data-width="96"></div>
+	                                <div class="progress-bar bg-color-base" role="progressbar" data-width="92"></div>
 	                            </div>
 	                        </div>
 	                        <div class="progress-box">
-	                            <h5>Graphic Design <span class="color-heading pull-right"></span></h5>
+	                            <h3 class="skills">Machine Learning<span class="color-heading pull-right"></span></h3>
 	                            <div class="progress">
-	                                <div class="progress-bar bg-color-base" role="progressbar" data-width="77"></div>
+	                                <div class="progress-bar bg-color-base" role="progressbar" data-width="75"></div>
+	                            </div>
+	                        </div>
+	                        <div class="progress-box">
+	                            <h3 class="skills">Lavoro di Squadra<span class="color-heading pull-right"></span></h3>
+	                            <div class="progress">
+	                                <div class="progress-bar bg-color-base" role="progressbar" data-width="87"></div>
+	                            </div>
+	                        </div>
+	                        <div class="progress-box">
+	                            <h3 class="skills">Versatilità<span class="color-heading pull-right"></span></h3>
+	                            <div class="progress">
+	                                <div class="progress-bar bg-color-base" role="progressbar" data-width="90"></div>
+	                            </div>
+	                        </div>
+	                        <div class="progress-box">
+	                            <h3 class="skills">Problem Solving<span class="color-heading pull-right"></span></h3>
+	                            <div class="progress">
+	                                <div class="progress-bar bg-color-base" role="progressbar" data-width="80"></div>
 	                            </div>
 	                        </div>
                         </div>
 					</section>
 
 					<section id="progetti" class="sezioni-cv">
-						<h2 class="titolo-sezione">Esperienze lavorative</h2>
+						<h2 class="titolo-sezione">Corsi e Certificati</h2>
+						<ul>
+							<li class="publication-list">oxford</li>
+							<li class="publication-list">machine learning</li>
+							<li class="publication-list">ielts</li>
+							<li class="publication-list">company creation</li>
+							<li class="publication-list">CCNA</li>
+						</ul>
 					</section>
 
 					<section id="interessi" class="sezioni-cv">
-						<h2 class="titolo-sezione">Interessi</h2>
+						<h2 class="titolo-sezione">Interessi e Passioni</h2>
+
+						<ul>
+							<li class="publication-list">fotografia</li>
+							<li class="publication-list">ciclismo</li>
+							<li class="publication-list">sostenibilità e ambiente</li>
+							<li class="publication-list">IA & deep Learning</li>
+							<li class="publication-list">video e photo editing</li>
+						</ul>
 					</section>
 			</div>
 

@@ -1,11 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CAllura);
+/*@import url('https://fonts.googleapis.com/css?family=Roboto');*/
 
 /*#header {
 	text-align: center;
 }*/
 
 body{
-	font-size: 16px; 
+	font-size: 16px;
+	/*font-family: 'Roboto', serif;*/
 	font-family: 'Poppins',
 	serif; width: 100%;
 	height: 100%;
@@ -21,7 +23,7 @@ body{
 
 #nav ul li a {
 	display: block;
-	padding: 0.5em 1.5em 0.5em 1.5em;
+	padding: 0.5em 1.5em 0.5em 0.5em;
 	color: rgba(255, 255, 255, 0.5);
 	text-decoration: none;
 	outline: 0;
@@ -59,55 +61,55 @@ body{
 }
 
 ul.icons {
-		cursor: default;
-	}
+	cursor: default;
+}
 
-		ul.icons li {
-			display: inline-block;
-		}
+ul.icons li {
+	display: inline-block;
+}
 
-		ul.icons a {
-			display: inline-block;
-			width: 2em;
-			height: 2em;
-			line-height: 2em;
-			text-align: center;
-			border: 0;
-		}
+ul.icons a {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
+	text-align: center;
+	border: 0;
+}
 
-		#header .icons {
-			font-size: 0.8em;
-			text-align: center;
-		}
+#header .icons {
+	font-size: 0.8em;
+	text-align: center;
+}
 
-			#header .icons a {
-				color: #41484c;
-				-moz-transition: color 0.35s ease-in-out;
-				-webkit-transition: color 0.35s ease-in-out;
-				-ms-transition: color 0.35s ease-in-out;
-				transition: color 0.35s ease-in-out;
-			}
+#header .icons a {
+	color: #41484c;
+	-moz-transition: color 0.35s ease-in-out;
+	-webkit-transition: color 0.35s ease-in-out;
+	-ms-transition: color 0.35s ease-in-out;
+	transition: color 0.35s ease-in-out;
+}
 
-				#header .icons a:hover {
-					color: #fff;
-				}
+#header .icons a:hover {
+	color: #fff;
+}
 
-	ul.icons {
-		cursor: default;
-	}
+ul.icons {
+	cursor: default;
+}
 
-		ul.icons li {
-			display: inline-block;
-		}
+ul.icons li {
+	display: inline-block;
+}
 
-		ul.icons a {
-			display: inline-block;
-			width: 2em;
-			height: 2em;
-			line-height: 2em;
-			text-align: center;
-			border: 0;
-		}
+ul.icons a {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
+	text-align: center;
+	border: 0;
+}
 
 #header li ol ul{
 	list-style: none;
@@ -1787,7 +1789,7 @@ h2 {
 }
 
 .bg-color-base {
-  background: #17bed2 !important;
+  background: #17BED2 !important; /*17BED2 FF8000*/
 }
 
 .color-heading {
@@ -1802,4 +1804,22 @@ h2 {
 	list-style: circle;
 	margin: 0 0 1% 3%;
 	font-size: 110%;
+}
+
+.publication-list {
+	list-style: disc;
+	margin: 0 0 1% 3%;
+	font-size: 110%;
+}
+
+.skills {
+	color: #585858;
+}
+
+/*------------------------------------------------------------------
+    [Icone navigazione]
+------------------------------------------------------------------*/
+
+.icon {
+	font-size: 120%;
 }
