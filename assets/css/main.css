@@ -2966,22 +2966,22 @@ select, textarea {
 
 		/* Header */
 
-			#header {
-				padding: 6em 3em 3em 3em;
-				width: 30%;
-			}
+		#header {
+			padding: 6em 3em 1.5em 3em;
+			width: 30%;
+		}
 
-				#header h1 {
-					font-size: 1.25em;
-				}
+		#header h1 {
+			font-size: 1.25em;
+		}
 
-					#header h1 br {
-						display: none;
-					}
+		#header h1 br {
+			display: none;
+		}
 
-				#header > .inner {
-					margin-bottom: 0;
-				}
+		#header > .inner {
+			margin-bottom: 0;
+		}
 
 		/* Footer */
 

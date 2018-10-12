@@ -24,7 +24,7 @@ body{
 #nav ul li a {
 	display: block;
 	padding: 0.5em 1.5em 0.5em 0.5em;
-	color: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.6);
 	text-decoration: none;
 	outline: 0;
 	border: 0;
@@ -83,7 +83,8 @@ ul.icons a {
 }
 
 #header .icons a {
-	color: #41484c;
+	color: white;
+	opacity: 0.7;
 	-moz-transition: color 0.35s ease-in-out;
 	-webkit-transition: color 0.35s ease-in-out;
 	-ms-transition: color 0.35s ease-in-out;
@@ -1622,13 +1623,25 @@ h2 {
     [Sezioni curriculum]
 ------------------------------------------------------------------*/
 
+header {
+	padding-top: 1em;
+}
+
+header.major h2 {
+	font-size: 1.85em;
+}
+
 .sezioni-cv {
-	margin: 1em 0 0 0;
+	margin: 1em 0 3em 0;
 	padding: 2em 0 0 0;
 }
 
 .titolo-sezione {
-	margin: 0 0 1em 0;
+	margin: 0 0 1em 5px;
+}
+
+.titolo-sezione-first {
+	margin: 0 0 -10px 3px;
 }
 
 .sez-content {
@@ -1637,6 +1650,10 @@ h2 {
 
 .indent{
 	margin: 0 0 0 1em;
+}
+
+#pubblicazioni, #certificati {
+	width: 90%;
 }
 
 /*------------------------------------------------------------------
@@ -1853,6 +1870,7 @@ li img {
 	clear: both;
 	padding: 0px;
 	margin: 0px;
+	width: 92%;
 }
 
 /*  COLUMN SETUP  */
@@ -1894,10 +1912,26 @@ li img {
 	width: 12vmin;
 }
 
+.caption-interests {
+	font-size: 110%;
+}
+
 /*------------------------------------------------------------------
     [Icone navigazione]
 ------------------------------------------------------------------*/
 
 .icon {
 	font-size: 120%;
+}
+
+/*------------------------------------------------------------------
+    [Icone contatti]
+------------------------------------------------------------------*/
+
+#footer-contact-icons {
+	/*width: 90%;*/
+}
+
+.contact-icons {
+	color: white;
 }
