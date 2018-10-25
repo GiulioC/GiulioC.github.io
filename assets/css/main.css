@@ -3136,20 +3136,20 @@ select, textarea {
 
 		/* Footer */
 
-			#footer {
-				padding: 2.25em 1.5em;
-			}
+		#footer {
+			padding: 2.25em 1.5em;
+		}
 
 		/* Main */
 
-			#main {
-				padding: 2.25em 1.5em 0.25em 1.5em;
-			}
+		#main {
+			padding: 2.25em 1.5em 0.25em 1.5em;
+		}
 
-				#main > section {
-					margin: 2.25em 0 0 0;
-					padding: 2.25em 0 0 0;
-				}
+		#main > section {
+			margin: 2.25em 0 0 0;
+			padding: 2.25em 0 0 0;
+		}
 
 		/* Poptrox */
 

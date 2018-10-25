@@ -19,6 +19,9 @@ function manageLavori(num) {
 			changeStyle(lastDiv,false)
 			lastDiv=String(num)
 			$(divname).fadeIn()
+			if ($(divname).visible(true) == false){
+				$(document).scrollTop( $(divname).offset().top );
+			}
 		}
 		else {
 			$(divname).slideDown(function(){
