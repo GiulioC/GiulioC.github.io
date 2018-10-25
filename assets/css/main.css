@@ -2802,6 +2802,7 @@ select, textarea {
 			text-align: center;
 			width: 100%;
 			z-index: 1;
+			overflow-y: scroll;
 		}
 
 		.poptrox-popup .nav-next,
@@ -3147,7 +3148,7 @@ select, textarea {
 		}
 
 		#main > section {
-			margin: 2.25em 0 0 0;
+			margin: 2.25em 0 0 .5em;
 			padding: 2.25em 0 0 0;
 		}
 

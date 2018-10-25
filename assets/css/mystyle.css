@@ -1627,7 +1627,7 @@ h2 {
 ------------------------------------------------------------------*/
 
 header {
-	padding-top: 1em;
+	padding-top: .4em;
 }
 
 header.major h2 {
@@ -1957,7 +1957,7 @@ b {
 }
 
 .home-title {
-	padding-left: 1em;
+	/*padding-left: 1em;*/
 }
 
 @media only screen and (max-width: 800px) {
@@ -1980,4 +1980,39 @@ b {
 .main-foto {
 	margin: 0em 1em 0em 0em;
 	padding: 0 1% 0 0;
+}
+
+/*------------------------------------------------------------------
+    [Bottone download CV]
+------------------------------------------------------------------*/
+
+#download-cv {
+	margin: 1em 0 1em 1.5em;
+}
+
+/*------------------------------------------------------------------
+    [Pagina contatti]
+------------------------------------------------------------------*/
+
+.sezioni-contatti div{
+	padding-left: 5%;
+}
+
+.sezioni-contatti div ul li {
+	margin-bottom: 2em;
+}
+
+.sezioni-contatti div ul li p {
+	margin-left: 3em;
+	padding-top: 1.3em;
+	font-size: 110%;
+}
+
+.no-indent div {
+	padding-left: 0;
+}
+
+.contacts-icon {
+	font-size: 3em;
+	text-shadow: 2px 2px #737373;
 }
