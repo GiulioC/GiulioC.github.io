@@ -1636,7 +1636,7 @@ header.major h2 {
 
 .sezioni-cv {
 	margin: 1em 0 3em 0;
-	padding: 2em 0 0 0;
+	padding: 1em 0 0 0;
 }
 
 .titolo-sezione {
@@ -2006,6 +2006,10 @@ b {
 	margin-left: 3em;
 	padding-top: 1.3em;
 	font-size: 110%;
+}
+
+.titoli-contatti {
+	padding: 0.5em 0 0 0;
 }
 
 .no-indent div {
