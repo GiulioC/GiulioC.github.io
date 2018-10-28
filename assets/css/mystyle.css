@@ -1641,6 +1641,7 @@ header.major h2 {
 
 .titolo-sezione {
 	margin: 0 0 1em 5px;
+	font-size: 1.65em;
 }
 
 .titolo-sezione-first {
@@ -2006,6 +2007,10 @@ b {
 	margin-left: 3em;
 	padding-top: 1.3em;
 	font-size: 110%;
+}
+
+.sezioni-contatti div a {
+	border-bottom: none;
 }
 
 .titoli-contatti {
