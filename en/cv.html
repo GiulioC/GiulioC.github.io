@@ -11,20 +11,149 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<link rel="stylesheet" href="../assets/css/mystyle.css" />
+		<link rel="stylesheet" href="../assets/css/animate.css" />
+		<style>
+	        /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+			/* Layout */
+			* {
+			  -moz-box-sizing: border-box;
+			  -webkit-box-sizing: border-box;
+			  box-sizing: border-box;
+			}
+
+			/* Styling */
+			.timeline {
+			  /*margin: 0 0 0 .3em;*/
+			  position: relative;
+			  max-width: 90%;
+			  font-size: 90%;
+			}
+			.timeline:before {
+			  background-color: black;
+			  content: '';
+			  margin-left: 0px;
+			  position: absolute;
+			  top: 0;
+			  /*left: 2em;*/
+			  width: 2px;
+			  height: 100%;
+			}
+
+			.timeline-event {
+			  position: relative;
+			}
+			.timeline-event:hover .timeline-event-icon {
+			  -moz-transform: rotate(-45deg);
+			  -ms-transform: rotate(-45deg);
+			  -webkit-transform: rotate(-45deg);
+			  transform: rotate(-45deg);
+			  background-color: #FAAC58;
+			}
+			.timeline-event:hover .timeline-event-thumbnail {
+			  -moz-box-shadow: inset 40em 0 0 0 #FAAC58;
+			  -webkit-box-shadow: inset 40em 0 0 0 #FAAC58;
+			  box-shadow: inset 40em 0 0 0 #FAAC58;
+			}
+
+			.timeline-event-copy {
+			  padding: 2em 0em 2em 0em;
+			  position: relative;
+			  top: -1.875em;
+			  left: 35px;
+			  width: 90%;
+			}
+			.timeline-event-copy h3 {
+			  font-size: 1.75em;
+			}
+			.timeline-event-copy h4 {
+			  font-size: 1.2em;
+			  margin-bottom: 1.2em;
+			}
+			.timeline-event-copy strong {
+			  font-weight: 700;
+			}
+			.timeline-event-copy p:not(.timeline-event-thumbnail) {
+			  padding-bottom: 1.2em;
+			}
+
+			.timeline-event-icon {
+			  -moz-transition: -moz-transform 0.2s ease-in;
+			  -o-transition: -o-transform 0.2s ease-in;
+			  -webkit-transition: -webkit-transform 0.2s ease-in;
+			  transition: transform 0.2s ease-in;
+			  -moz-transform: rotate(45deg);
+			  -ms-transform: rotate(45deg);
+			  -webkit-transform: rotate(45deg);
+			  transform: rotate(45deg);
+			  background-color: black;
+			  outline: 10px solid white;
+			  display: block;
+			  margin: 0.5em 0em 0.5em 0em;
+			  position: absolute;
+			  top: 0;
+			  left: -.4em;
+			  width: 1em;
+			  height: 1em;
+			}
+
+			.timeline-event-thumbnail {
+			  -moz-transition: box-shadow 0.5s ease-in 0.1s;
+			  -o-transition: box-shadow 0.5s ease-in 0.1s;
+			  -webkit-transition: box-shadow 0.5s ease-in;
+			  -webkit-transition-delay: 0.1s;
+			  transition: box-shadow 0.5s ease-in 0.1s;
+			  color: white;
+			  font-size: 0.8em;
+			  background-color: black;
+			  -moz-box-shadow: inset 0 0 0 0em #FE642E;
+			  -webkit-box-shadow: inset 0 0 0 0em #FE642E;
+			  box-shadow: inset 0 0 0 0em #FE642E;
+			  display: inline-block;
+			  margin-bottom: 1.2em;
+			  padding: 0.25em 1em 0.2em 1em;
+			}
+
+			.timeline-last {
+				padding: 2em 0 0 0;
+			}
+
+			#nav ul li a span::before {
+				background-color: white;
+				width: 2em;
+				border-radius: 3px;
+				box-shadow: 4px 4px #000000;
+				opacity: 0.7;
+			}
+
+			#nav ul li a span {
+				font-size: 0.9em;
+				text-align: right;
+			}
+
+			#main {
+				padding: 0 0 0 2%;
+			}
+
+			ul .timeline {
+				padding-left: 0;
+			}
+    </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
-					<a class="image avatar"><img src="../images/avatar.jpg" alt="" /></a>
-					<h3><strong class="indent-right">Giulio Carducci</strong><p class="indent-right">Ingegnere Informatico</p>
+					<a class="image avatar"><img src="../images/avatar.jpg" alt="" id="foto-avatar"/></a>
+					<h3><strong class="indent-right">Giulio Carducci</strong><p class="indent-right">Computer Engineer</p>
 				
 					<nav id="nav">
 						<ul>
 							<li><a href="index.html" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Home</span></a></li>
 							<li><a href="cv.html" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Curriculum Vitae</span></a></li>
-							<li><a href="photo.html" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Fotografia</span></a></li>
+							<li><a href="photo.html" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Photography</span></a></li>
 							<li><a href="contact.html" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
 						</ul>
 					</nav>
@@ -33,30 +162,237 @@
 
 		<!-- Main -->
 			<div id="main">
-
-				<!-- One -->
 					<section id="one">
-
 						<div id="language-choice">
 							<span class="dropdown-el">
 							    <input type="radio" name="sortType" id="lang-it"><label for="lang-it" onclick="window.location = String(window.location).split('/en/')[0]+'/it/cv.html'"><img src="../images/italy-flag.png">&ensp;Italiano</label>
 							    <input type="radio" name="sortType" checked="checked" id="lang-en"><label for="lang-en"><img src="../images/uk-flag.png">&ensp;English</label>
 							</span>
 						</div>
-
-
+						<header class="major">
+							<h2 class="titolo-sezione-first">Curriculum Vitae</h2>
+						</header>
 					</section>
+
+					<div id="download-cv">
+						<a href="../files/Giulio's Resume.pdf" target="blank" class="button primary">
+				            <i class="fa fa-download fa-lg" aria-hidden="true"></i>&nbsp;
+				            Download CV
+			          	</a>
+		          	</div>
+
+					<section id="lavoro" class="sezioni-cv">
+						<h2 class="titolo-sezione" class="titolo-timeline">Work Experience</h2>
+						<ul class="timeline">
+
+						  <li class="timeline-event">
+						    <label class="timeline-event-icon"></label>
+						    <div class="timeline-event-copy">
+						      <p class="timeline-event-thumbnail">June 2018 - Today</p>
+						      <h2><strong style="color:black">RESEARCH FELLOW FOR THE REPOSUM PROJECT</strong></h2>
+						      <h4><strong>Università degli Studi di Torino & Synapta s.r.l.</strong></h4>
+						      <h4>The scholarship is funded by the Department of Philosophy and Educational Sciences of UniTo, and involves the annotation alaysis and representation of a corpus of metadata about italian and foreign PhD dissertations using natural language processing and machine learning techniques.</h4>
+						      <ul>
+						      	<li class="cv-list">Classification of Philosophy theses using hybrid machine learning approaches</li>
+						      	<li class="cv-list">Determination of the subject of the thesis with a strategy based on topic modeling</li>
+						      	<li class="cv-list">Feature extraction from documents with several techniques such as bag-of-words, entity recognition, entity linking</li>
+						      	<li class="cv-list">I worked in close contact with members of the Department of Philosophy and Computer Science to reach the common goal</li>
+						      </ul>
+						    </div>
+						  </li>
+
+						  <li class="timeline-event">
+						    <label class="timeline-event-icon"></label>
+						    <div class="timeline-event-copy">
+						      <p class="timeline-event-thumbnail">May 2018 - Today</p>
+						      <h2><strong style="color:black">SOFTWARE DEVELOPER</strong></h2>
+						      <h4><strong>Synapta s.r.l.</strong></h4>
+						      <h4>I started woring at Synapta right after my Master's Degree and I am currently carrying on the collaboration in parallel with the activity of the scholarship. My main occupations are software development and data analysis for different kind of tass, but may vary depending on the needs.</h4>
+						      <ul>
+						      	<li class="cv-list">I contributed to the creation of a digital archive for the books of Accademia delle Scienze di Torino (ASTO) by generating metadata of the books</li>
+						      	<li class="cv-list">Beta testing and unit testing for the website <a href="https://contrattipubblici.org" target="blank">contrattipubblici.org</a></li>
+						      	<li class="cv-list">I extracted relevant pieces of information from a corpus of textual documents using different Natural Language Processing techniques, such as Topic Modeling, keywords extraction, word-based clustering</li>
+						      	<li class="cv-list">Search with API, download, Optical Character Recognition (OCR), and indexing  of relevant documents in a pre-existing search engine fro documents</li>
+						      	<li class="cv-list">I devised machine learning and NLP strategies for out-of-core computation on huge data volumes</li>
+						      	<li class="cv-list">Occasional frontend and backend development for secondary tasks</li>
+						      </ul>
+						    </div>
+						  </li>
+
+						  <li class="timeline-event">
+						    <label class="timeline-event-icon"></label>
+						    <div class="timeline-event-copy">
+						      <p class="timeline-event-thumbnail">April 2015 - September 2015</p>
+						      <h2><strong style="color:black">RESEARCH INTERNSHIP</strong></h2>
+						      <h4><strong>Cognitive Systems Group (Universität Bremen)</strong></h4>
+						      <h4>Cognitive Systems Group (CoSy) is a research center of the University of Bremen that studies how the human mind processes spatial information and the surrounding events, and develops tool that helps the humans in these tasks. I worked for 6 months as an intern researcher thanks to the Erasmus+ program, where I had the opportunity to collaborate with a multicultural and multidisciplinary team for a european project (<a href="http://hcc.uni-bremen.de/cognitive-vision/" target="blank">Cognitive Vision</a>).</h4>
+						      <ul>
+						      	<li class="cv-list">Camera movement estimation based on detected motion in scene</li>
+						      	<li class="cv-list">Applicazione of different methods for face detection and face recognition in the movie domain</li>
+						      	<li class="cv-list">Training of custom shapes and objects detectors</li>
+						      </ul>
+						    </div>
+						  </li>
+
+						</ul>
+					</section>
+
+					<section id="istruzione" class="sezioni-cv">
+						<h2 class="titolo-sezione" class="titolo-timeline">Education</h2>
+						<ul class="timeline">
+
+							<li class="timeline-event">
+						    <label class="timeline-event-icon"></label>
+						    <div class="timeline-event-copy">
+						      <p class="timeline-event-thumbnail">September 2015 - April 2018</p>
+						      <h2><strong style="color:black">MASTER DEGREE IN COMPUTER ENGINEERING</strong></h2>
+						      <h4><strong>Politecnico di Torino</strong></h4>
+						      <h4>I chose the <i>Software</i> path, thaught in english, and included some courses from the <i>Data Science</i> path. I wored on my Thesis in the Istituto Superiore Mario Boella (ISMB), a research center that is highly focused in innovation. My wor consists in determining the personality of Twitter users based on their tweets using machine learning and natural language processing techniques.</h4>
+						      <ul>
+						      	<li class="cv-list">Thesis: <i>Semantic Analysis to Compute Personality Traits From Social Media Posts</i></li>
+						      	<li class="cv-list">Read the Thesis at <a href="../files/giulio_carducci_master_thesis.pdf" target="blank">this link</a> (TLDR; look at the <a href="https://www.slideshare.net/GiulioCarducci/semantic-analysis-to-compute-personality-traits-from-social-media-posts-117854220" target="blank">presentation</a>!)</li>
+						      	<li class="cv-list">Final Grade: 99/110</li>
+						      </ul>
+						    </div>
+						  	</li>
+
+						  	<li class="timeline-event">
+						    <label class="timeline-event-icon"></label>
+						    <div class="timeline-event-copy">
+						      <p class="timeline-event-thumbnail">September 2011 - March 2015</p>
+						      <h2><strong style="color:black">BACHELOR DEGREE IN COMPUTER ENGINEERING</strong></h2>
+						      <h4><strong>Università degli Studi Dell'Aquila</strong></h4>
+						      <h4>I worked at the Thesis in the DEWS research center, with the objective of developing and testing a local database for an embedded face recognition system.</h4>
+						      <ul>
+						      	<li class="cv-list">Thesis: <i>Design, implementation and exploitation of a Database to support an embedded face recognition system</i></li>
+						      	<li class="cv-list">Final Grade: 102/110</li>
+						      </ul>
+						    </div>
+						  	</li>
+
+						  	<li class="timeline-event">
+						    <label class="timeline-event-icon"></label>
+						    <div class="timeline-event-copy timeline-last">
+						      <p class="timeline-event-thumbnail">September 2006 - July 2011</p>
+						      <h2><strong style="color:black">HIGH SCHOOL DIPLOMA</strong></h2>
+						      <h4><strong>Liceo Scientifico "A. Bafile", L'Aquila</strong></h4>
+						      <h4>Liceo Scientifico Sperimentale PNI (Computer Science National Plan).</h4>
+						      <ul>
+						      	<li class="cv-list">Final Grade: 93/100</li>
+						      </ul>
+						    </div>
+						  	</li>
+
+						</ul>
+					</section>
+
+					<section id="pubblicazioni" class="sezioni-cv">
+						<h2 class="titolo-sezione">Publications</h2>
+						<ul>
+							<li class="publication-list">
+								Carducci, G., Rizzo, G., Monti, D., Palumbo, E., Morisio, M., <b>TwitPersonality: Computing Personality Traits from Tweets using Word Embeddings and Supervised Learning</b>, <i>Multidisciplinary Digital Publishing Institute (MDPI)</i>, 2018. <a href="https://doi.org/10.3390/info9050127" target="blank">doi.org/10.3390/info9050127</a>
+							</li>
+							<li class="publication-list">
+								Carducci G., Leontino M. Radicioni, D. P. Bonino, G., Pasini E., Tripodi P., <b>Semantically Aware Text Categorisation for Metadata Annotation</b>, <i>Italian Research Conference on Digital Libraries (IRCDL)</i>, 2018.
+							</li>
+							<li class="publication-list">
+								Work in progress...
+							</li>
+						</ul>
+					</section>
+
+					<section id="competenze" class="sezioni-cv">
+                        <h2 class="titolo-sezione">Skills</h2>
+                        <div class="indent">
+	                        <div class="progress-box">
+	                            <h3 class="skills">Python<span class="color-heading pull-right"></span></h3>
+	                            <div class="progress">
+	                                <div class="progress-bar bg-color-base" role="progressbar" data-width="84"></div>
+	                            </div>
+	                        </div>
+	                        <div class="progress-box">
+	                            <h3 class="skills">Natural Language Processing<span class="color-heading pull-right"></span></h3>
+	                            <div class="progress">
+	                                <div class="progress-bar bg-color-base" role="progressbar" data-width="92"></div>
+	                            </div>
+	                        </div>
+	                        <div class="progress-box">
+	                            <h3 class="skills">Machine Learning<span class="color-heading pull-right"></span></h3>
+	                            <div class="progress">
+	                                <div class="progress-bar bg-color-base" role="progressbar" data-width="80"></div>
+	                            </div>
+	                        </div>
+	                        <div class="progress-box">
+	                            <h3 class="skills">Problem Solving<span class="color-heading pull-right"></span></h3>
+	                            <div class="progress">
+	                                <div class="progress-bar bg-color-base" role="progressbar" data-width="95"></div>
+	                            </div>
+	                        </div>
+                        </div>
+					</section>
+
+					<section id="certificati" class="sezioni-cv">
+						<h2 class="titolo-sezione">Courses and Certificates</h2>
+						<ul class="cert-ul">
+							<li><img src="../images/cert.png" class="certificate-img"><p class="row-above">Machine Learning by Andrew Ng</p><br><p class="row-below">Coursera</p></li>
+							<li><img src="../images/cert.png" class="certificate-img"><p class="row-above">IELTS 7.5 (CEFR C1)</p><br><p class="row-below">British Council</p></li>
+							<li><img src="../images/cert.png" class="certificate-img"><p class="row-above">CCNA Routing and Switching</p><br><p class="row-below">CISCO Networing Academy</p></li>
+							<li><img src="../images/cert.png" class="certificate-img"><p class="row-above">Intensive English Course</p><br><p class="row-below">CES Oxford Centre of English Studies Wheatley (UK)</p></li>
+							<li><img src="../images/cert.png" class="certificate-img"><p class="row-above">Company Creation</p><br><p class="row-below">Starboost</p></li>
+						</ul>
+					</section>
+
+					<section id="interessi" class="sezioni-cv">
+						<h2 class="titolo-sezione">Interests and passions</h2>
+
+						<div class="section-interests group-interests">
+							<div class="col span_1_of_4">
+								<img src="../images/dslr.png" class="image-interests">
+								<p class="caption-interests">Photography</p>
+							</div>
+							<div class="col span_1_of_4">
+								<img src="../images/mtb.png" class="image-interests">
+								<p class="caption-interests">Cycling</p>
+							</div>
+							<div class="col span_1_of_4">
+								<img src="../images/mountain.png" class="image-interests">
+								<p class="caption-interests">Mountain</p>
+							</div>
+							<div class="col span_1_of_4">
+								<img src="../images/environment.png" class="image-interests">
+								<p class="caption-interests">Sustainability and Environment</p>
+							</div>
+						</div>
+						<div class="section-interests group-interests">
+							<div class="col span_1_of_4">
+								<img src="../images/brain.png" class="image-interests">
+								<p class="caption-interests">IA & Deep Learning</p>
+							</div>
+							<div class="col span_1_of_4">
+								<img src="../images/editing.png" class="image-interests">
+								<p class="caption-interests">Photo & Video editing</p>
+							</div>
+							<div class="col span_1_of_4">
+								<img src="../images/chef.png" class="image-interests">
+								<p class="caption-interests">Cooking</p>
+							</div>
+							<div class="col span_1_of_4">
+								<img src="../images/note.png" class="image-interests">
+								<p class="caption-interests">Classical Music<p>
+							</div>
+						</div>
 				
+					</section>
 			</div>
 
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
 					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+						<li><a href="https://github.com/GiulioC" target="blank" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.linkedin.com/in/giuliocarducci/" target="blank" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://telegram.me/giuliocard" target="blank" class="icon fa-paper-plane"><span class="label">Telegram</span></a></li>
+						<li><a href="https://twitter.com/GiulioCardz" target="blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 					</ul>
 					<ul class="copyright">
 						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
@@ -72,5 +408,8 @@
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
 			<script src="../assets/js/language.js"></script>
+    		<script src="../assets/js/progress-bar.min.js"></script>
+    		<script src="../assets/js/jquery.appear.js"></script>
+    		<script src="../assets/js/misc.js"></script>
 	</body>
 </html>
