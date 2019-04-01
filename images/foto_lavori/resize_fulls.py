@@ -1,8 +1,8 @@
 from PIL import Image
 import os
 
-target_dir = "3"
-percent = 0.5
+target_dir = "5"
+percent = 0.25
 
 for dir_name in os.listdir("."):
 	if dir_name[0] == target_dir:
