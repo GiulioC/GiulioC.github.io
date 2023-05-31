@@ -196,12 +196,28 @@
 					<ul class="timeline">
 
 						<li class="timeline-event">
+							<label class="timeline-event-icon"></label>
+							<div class="timeline-event-copy">
+								<p class="timeline-event-thumbnail">June 2022 - Presente</p>
+								<h2><strong style="color:black">DATA ENGINEER</strong></h2>
+								<h4><strong>Revelio Labs</strong></h4>
+								<h4>Revelio Labs raccoglie milioni di profili utente e annunci di lavoro in un unico posto, creando un database per il mercato del lavoro. Questo permette sia di studiare le ultime tendenze del mondo lavorativo, che di ricostruirne lo storico dei cambiamenti nel tempo. Come Data Engineer mi occupo dell'acquisizione e caricamento di questi dati nel DB principale; questo include anche la pulizia e standardizzazione dei dati grezzi, e l'integrazione con quelli esistenti.</h4>
+								<ul>
+									<li class="cv-list">Ho riprogettato il processo principale di integrazione dati dell'azienda, rendendolo più efficiente, robusto e leggero. Ho anche fatto in modo che venisse eseguito su base giornaliera in modo completamente automatico, a differenza dell'esecuzione manuale e mensile utilizzata in precedenza.</li>
+									<li class="cv-list">Gestisco numerosi processi di acquisizione di diversi tipi di dati nel database principale; questo comprende l'aggiunta di nuove funzionalità, la manutenzione nel tempo e il controllo sulla consistenza dei dati.</li>
+									<li class="cv-list">Sono responsabile del flusso giornaliero di milioni di record/terabyte di dati.</li>
+									<li class="cv-list">Mi sono occupato della migrazione dell'intera base di conoscenza verso una nuova data warehouse, scrivendo un modulo python che clona le tabelle nella destinazione, mantenendo lo schema e i vincoli presenti. Il modulo è stato utilizzato da decine di colleghi e centinaia di processi automatici.</li>
+								</ul>
+							</div>
+							</li>
+
+						<li class="timeline-event">
 						<label class="timeline-event-icon"></label>
 						<div class="timeline-event-copy">
 							<p class="timeline-event-thumbnail">Maggio 2018 - Maggio 2022</p>
 							<h2><strong style="color:black">R&D SOFTWARE ENGINEER</strong></h2>
-							<h4><strong>Synapta s.r.l.</strong></h4>
-							<h4>Ho iniziato a lavorare in Synapta non appena conclusi gli studi e ho continuato questa collaborazione in parallelo all'attività prevista dalla borsa di studio. Mi sono occupato principalmente di analisi di dati e sviluppo software con algoritmi di intelligenza artificiale, e dell'integrazione lato backend di queste applicazioni. La maggior parte del lavoro è orientata al sito <a href="https://contrattipubblici.org" target="_blank">contrattipubblici.org</a>, ma occasionalmente collaboro anche ad altri progetti minori.</h4>
+							<h4><strong>Synapta</strong></h4>
+							<h4>Ho iniziato a lavorare in Synapta non appena conclusi gli studi e ho continuato questa collaborazione in parallelo all'attività prevista dalla borsa di studio. Mi sono occupato principalmente di analisi di dati e sviluppo software con algoritmi di intelligenza artificiale, e dell'integrazione lato backend di queste applicazioni. La maggior parte del lavoro è orientata al sito <a href="https://contrattipubblici.org" target="_blank">contrattipubblici.org</a>, ma occasionalmente ho lavorato anche ad altri progetti minori.</h4>
 							<ul>
 								<li class="cv-list">Ho applicato diverse tecniche analisi di dati, analisi del linguaggio naturale (NLP) e machine learning per derivare nuove informazioni dalla base di conoscenza esistente</li>
 								<li class="cv-list">Ho <a href="https://synapta.it/blog/classificare-i-documenti-relativi-alliso-9001-con-tecniche-dinformation-extraction/" target="_blank">individuato e classificato</a> i riferimenti alla normativa ISO 9001 all'interno dei documenti della pubblica amministrazione utilizzando tecniche di information extraction e machine learning.</li>
@@ -222,7 +238,7 @@
 						<div class="timeline-event-copy">
 							<p class="timeline-event-thumbnail">Giugno 2018 - Giugno 2019</p>
 							<h2><strong style="color:black">RICERCATORE PER IL PROGETTO REPOSUM</strong></h2>
-							<h4><strong>Università degli Studi di Torino & Synapta s.r.l.</strong></h4>
+							<h4><strong>Università degli Studi di Torino & Synapta</strong></h4>
 							<h4>La borsa di studio, bandita dal Dipartimento di Filosofia e Scienze dell’Educazione di UniTo, prevede l'annotazione, analisi e rappresentazione di un corpus di metadati su tesi di dottorato italiane ed estere usando tecniche di information extraction, natural language processing e machine learning. Ho collaborato a stretto contatto con i membri del Dipartimento di Filosofia e di Informatica per raggiungere gli obiettivi di ricerca.</h4>
 							<ul>
 							<li class="cv-list">Ho presentato i risultati di ricerca ottenuti dal nostro team nella conferenza <a href="https://ircdl2019.isti.cnr.it/">IRCDL</a> di Pisa nel 2019.</li>
@@ -312,18 +328,12 @@
 						<li class="publication-list">
 							Carducci G., Leontino M. Radicioni, D. P. Bonino, G., Pasini E., Tripodi P., <b>Semantically Aware Text Categorisation for Metadata Annotation</b>, <i>Italian Research Conference on Digital Libraries (IRCDL)</i>, 2018. <a href="https://doi.org/10.1007/978-3-030-11226-4_25" target="_blank">https://doi.org/10.1007/978-3-030-11226-4_25</a>
 						</li>
-						<li class="publication-list">
-							Futia, G., Vetrò, A., Carducci, G., Allavena, D., De Martin, J. C., <b>Modeling the Semantics of Structured Sources with Steiner Trees and Relational Graph Convolutional Networks</b>, <i>IEEE Access</i>, 2019. (sotto revisione)
-						</li>
-						<li class="publication-list">
-							Work in progress...
-						</li>
 					</ul>
 				</section>
 
 				<section id="competenze" class="sezioni-cv">
 					<h2 class="titolo-sezione">Competenze</h2>
-					<div class="indent">
+					<!--<div class="indent">
 						<div class="progress-box">
 							<h3 class="skills">Python<span class="color-heading pull-right"></span></h3>
 							<div class="progress">
@@ -348,58 +358,46 @@
 								<div class="progress-bar bg-color-base" role="progressbar" data-width="95"></div>
 							</div>
 						</div>
-					</div>
+					</div>-->
 
 					<div id="more-skills">
-						<div id="all-skills-show" style="cursor:pointer">
+						<!--<div id="all-skills-show" style="cursor:pointer">
 							<img src="../images/arrow-down.png" align="left" width="25"><p> Mostra tutto</p>
 						</div>
+						<div id="all-skills" style="display: none;">-->
 
-						<div id="all-skills" style="display: none;">
+						<div id="all-skills">
 							<ul class="all-skills-section">
-								<li>
-									<table>
-										<tr>
-											<td>Javascript</td>
-											<td>Conoscenza accademica e lavorativa</td>
-										</tr>
-										<tr>
-											<td>PHP</td>
-											<td>Conoscenza accademica e personale</td>
-										</tr>
-										<tr>
-											<td>Java, PHP, C, C++</td>
-											<td>Conoscenza accademica</td>
-										</tr>
-										<tr>
-											<td>HTML, CSS</td>
-											<td>Quanto basta per realizzare questo sito :D</td>
-										</tr>
-									</table>
-								</li>
+								<li>Python, Javascript</li>
+								<li>SQL</li>
+								<li>HTML, CSS</li>
+								<li>Bash</li>
+							</ul>
+							<ul class="all-skills-section">
+								<li>MySQL, PostgreSQL, Redshift, Snowflake</li>
+								<li>Elasticsearch</li>
 							</ul>
 							<ul class="all-skills-section">
 								<li>Scikit-learn</li>
-								<li>OpenCV</li>
+								<li>Pyspark</li>
+								<li>Node.js</li>
 							</ul>
 							<ul class="all-skills-section">
-								<li>MySQL, PostgreSQL, mongoDB</li>
+								<li>Cloud Computing</li>
+								<li>Natural Language Processing</li>
 								<li>Git</li>
-								<li>Elasticsearch</li>
-								<li>Matlab</li>
-								<li>Windows, Linux</li>
-								<li>Microsoft Office</li>
 							</ul>
 							<ul class="all-skills-section">
+								<li>Windows, Linux</li>
 								<li>Adobe Photoshop, Lightroom</li>
 								<li>GIMP</li>
 								<li>Sony Vegas</li>
 							</ul>
 							<ul class="all-skills-section"></ul>
 
-							<div id="all-skills-hide" style="cursor:pointer">
+							<!--<div id="all-skills-hide" style="cursor:pointer">
 								<img src="../images/arrow-up.png" align="left" width="25"><p>Nascondi</p>
-							</div>
+							</div>-->
 						</div>
 					</div>
 				</section>
