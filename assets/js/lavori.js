@@ -3,7 +3,7 @@ document.getElementById("lavoro2").addEventListener("click", function(){manageLa
 document.getElementById("lavoro3").addEventListener("click", function(){manageLavori(3);});
 document.getElementById("lavoro4").addEventListener("click", function(){manageLavori(4);});
 document.getElementById("lavoro5").addEventListener("click", function(){manageLavori(5);});
-//document.getElementById("lavoro6").addEventListener("click", function(){manageLavori(6);});
+document.getElementById("lavoro6").addEventListener("click", function(){manageLavori(6);});
 
 var lastDiv = null
 
@@ -46,3 +46,10 @@ function changeStyle(divnum, bool){
 		$(divID).css("opacity","")
 	}
 }
+
+function showCaptions(){
+	const language = document.URL.match(/\/([a-z]{2})\/photo/)[1]
+	const hideLang = language === 'it' ? 'en' : 'it';
+	$(`.desc-${hideLang}`).remove()
+}
+showCaptions();

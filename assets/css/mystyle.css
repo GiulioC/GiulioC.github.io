@@ -120,10 +120,11 @@ ul.icons a {
 /*          LANGUAGE SWITCHER                            */
 /*#######################################################*/
 #language-choice {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0em;
 	font-size: 90%;
+	z-index: 9999;
 }
 
 .dropdown-el {
