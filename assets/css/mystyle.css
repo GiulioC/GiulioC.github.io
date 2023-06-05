@@ -1963,7 +1963,8 @@ b {
 }
 
 @media only screen and (max-width: 800px) {
-	#home-content { margin-right: 10%; }
+	#home-content { margin: 0 1em 0 .5em; }
+	#foto-home { margin: 0 0 1em 0 !important; }
 }
 
 #foto-home {
